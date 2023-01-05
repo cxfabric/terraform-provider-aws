@@ -1,5 +1,11 @@
 terraform {
   required_version = ">= 0.12"
+  backend "s3" { // Configure backend S3 bucket for statefile. Bucket must pre-exist
+    bucket = "cxfab-terraform-state"
+    key    = "dev-aws-eks/terraform.tfstate" // create folder object 'project_2' for state file
+    region = "us-east-1" // Variables cannot be used here
+  }
+
 }
 
 provider "aws" {
