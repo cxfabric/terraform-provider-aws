@@ -61,10 +61,10 @@ resource "aws_security_group_rule" "demo-cluster-ingress-workstation-https" {
   type              = "ingress"
 }
 
-resource "aws_eks_cluster" "demo" {
+resource "aws_eks_cluster" "demo" { // https://registry.terraform.io/providers/hashicorp/aws/latest/docs/resources/eks_cluster
   name     = var.cluster-name
   role_arn = aws_iam_role.demo-cluster.arn
-  version = 1.24
+  version = 1.24 // 1.26.23 Added 1.24 to match the manual upgrade I did in the AWS Console -djl
 
   vpc_config {
     security_group_ids = [aws_security_group.demo-cluster.id]
