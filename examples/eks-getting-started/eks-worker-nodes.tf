@@ -48,9 +48,9 @@ resource "aws_eks_node_group" "demo" { // https://registry.terraform.io/provider
   // release_version = 1.24 // 1.26.23 upgrade to newest 1.4 djl
 
   scaling_config {
-    desired_size = 2
-    max_size     = 2
-    min_size     = 2
+    desired_size = 3
+    max_size     = 4
+    min_size     = 3
   }
 
   depends_on = [
