@@ -64,7 +64,7 @@ resource "aws_security_group_rule" "demo-cluster-ingress-workstation-https" {
 resource "aws_eks_cluster" "demo" { // https://registry.terraform.io/providers/hashicorp/aws/latest/docs/resources/eks_cluster
   name     = var.cluster-name
   role_arn = aws_iam_role.demo-cluster.arn
-  version  = "latest"  # 6.20.2023 Specify "latest" to upgrade to the latest release version
+  version  = "1.26"  # 6.20.2023 Specify to upgrade to the next version
 
   vpc_config {
     security_group_ids = [aws_security_group.demo-cluster.id]
