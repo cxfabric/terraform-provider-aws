@@ -45,7 +45,8 @@ resource "aws_eks_node_group" "demo" { // https://registry.terraform.io/provider
   subnet_ids      = aws_subnet.demo[*].id
   disk_size       = 20 // Optional. Disk size for worker nodes. Default is 20 GB. Added by Darrell.
   instance_types  = ["t3.xlarge"] // Optional.  List of instance types. Default t3.medium. Required for multiple cxfrontend pods.
-  // release_version = 1.24 // 1.26.23 upgrade to newest 1.4 djl
+  version = "latest"  # 6.20.2023 Specify "latest" to upgrade the node group to the latest AMI version
+
 
   scaling_config {
     desired_size = 3
