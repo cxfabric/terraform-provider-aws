@@ -1,3 +1,4 @@
+# NOTE! Deleted all workflows to stop GitHub Actions jobs from running.
 # GitHub Workflows
 
 ## Using the `setup-terraform` action
