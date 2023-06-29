@@ -1,9 +1,9 @@
 name: Snapshot
 
-on:
-  schedule:
-    - cron: '15 5 * * *'
-  workflow_dispatch:
+# on:
+#   schedule:
+#     - cron: '15 5 * * *'
+#   workflow_dispatch:
 
 jobs:
   goreleaser:
