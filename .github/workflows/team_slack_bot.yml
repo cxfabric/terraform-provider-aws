@@ -1,8 +1,8 @@
 name: team-slack-bot
 
-on:
-  schedule:
-    - cron: '0 15 * * 1-5'
+# on:
+#   schedule:
+#     - cron: '0 15 * * 1-5'
 
 jobs:
   open-pr-stats:
